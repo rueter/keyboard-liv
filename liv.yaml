@@ -1,21 +1,21 @@
-internalName: _keyboards
+internalName: Livonian_keyboards
 
 displayNames:
-  liv: 
-  en: 
+  liv: Līv
+  en: Livonian
 
 locale: liv
 
 modes:
 # mobile layouts:
   mobile-default: |
-    á š e r t y u i o p ŋ
-    a s d f g h j k l đ ŧ
-    ž z č c v b n m w
+    ä õ e r t y u i o p ǭ
+    a s d f g h j k l ȯ	ö
+    z x c v b n m ʼ
   mobile-shift: |
-    Á Š E R T Y U I O P Ŋ
-    A S D F G H J K L Đ Ŧ
-    Ž Z Č C V B N M W
+    Ä Õ E R T Y U I O P Ǭ
+    A S D F G H J K L Ȯ	Ö
+    Z X C V B N M ʼ
 
 # desktop keyboard layouts:
   "iso-default": &default |
@@ -57,14 +57,51 @@ modes:
 
 # mobile keyboards properties:
 longpress:
-  Á: Q
-  A: Æ Ä Å
-  Č: X
-  O: Ø Ö
-  á: q
-  a: æ ä å
-  č: x
-  o: ø ö
+  A: Ā	
+  E: Ē
+  I: Ī
+  O: Ō
+  Ǭ: Ǫ
+  Ȯ: Ȱ
+  U: Ū
+  Y: Ȳ
+  Ö: Ȫ
+  Ä: Q Ǟ
+  Õ: W Ȭ
+
+  C: Č
+  D: Ḑ
+  G: Ģ
+  H: Ü
+  K: Ķ
+  L: Ļ
+  N: Ņ
+  R: Ŗ
+  S: Š
+  T: Ţ
+
+  a: ā
+  e: ē
+  i: ī
+  o: ō
+  ǭ: ǫ
+  ȯ: ȱ
+  u: ū
+  y: ȳ
+  ö: ȫ
+  ä: q ǟ 
+  õ: w ȭ
+
+  c: č
+  d: ḑ
+  g: ģ
+  h: ü
+  k: ķ
+  l: ļ
+  n: ņ
+  r: ŗ
+  s: š
+  t: ţ
 
 styles:
   tablet:
@@ -78,8 +115,8 @@ styles:
       backspace: [3, right, fill]
 
 strings:
-  space: gaska
-  return: linnjámolsun
+  space: vait
+  return: sizzõl
 
 # other desktop keyboard properties:
 decimal: ","
