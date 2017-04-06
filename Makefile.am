@@ -9,6 +9,7 @@ IOS_AUTOTOOLS_PATH=$(shell echo $$(pwd)/deps/$(IOS_AUTOTOOLS))
 IOS_IME=tasty-imitation-keyboard
 ANDROID_IME=giella-ime
 SOFTKBDGEN=kbdgen
+DIVVUN_GITHUB=https://github.com/divvun
 # RELEASE=-R
 
 # XML_SRC can be a language code or the full xml file name, both given
@@ -60,15 +61,15 @@ deps:
 	fi ; \
 	cd $(IOS_AUTOTOOLS)/ && git pull --all && cd ../ ; \
 	if ! [ -d $(IOS_IME) ]; then\
-		git clone https://github.com/bbqsrc/$(IOS_IME).git ; \
+		git clone $(DIVVUN_GITHUB)/$(IOS_IME).git ; \
 	fi ; \
 	cd $(IOS_IME)/ && git checkout hfst && git pull --all && cd .. ; \
 	if ! [ -d $(ANDROID_IME) ]; then\
-		git clone https://github.com/bbqsrc/$(ANDROID_IME).git ; \
+		git clone $(DIVVUN_GITHUB)/$(ANDROID_IME).git ; \
 	fi ; \
 	cd $(ANDROID_IME)/ && git pull --all && cd .. ; \
 	if ! [ -d $(SOFTKBDGEN) ]; then\
-		git clone https://github.com/bbqsrc/$(SOFTKBDGEN).git ; \
+		git clone $(DIVVUN_GITHUB)/$(SOFTKBDGEN).git ; \
 	fi ; \
 	cd $(SOFTKBDGEN)/ && git pull --all && cd ..
 
@@ -139,12 +140,14 @@ x11: deps
 		project.yaml
 
 draft: $(GTLANG)-draft.yaml
-$(GTLANG)-draft.yaml: deps \
-				$(GTCORE)/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC)
+$(GTLANG)-draft.yaml: 
 	@echo
 	@echo "*** Building draft keyboard yaml file based on: ***"
 	@echo "*** $$GTCORE/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC)"
 	@echo
+	@echo "Test: $(CLDR_SRC)"
+	@echo
+	exit 1
 	PYTHONPATH=deps/$(SOFTKBDGEN) \
 	python3.5 -m kbdgen.cldr cldr2kbdgen \
 		$(GTCORE)/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC) \
