@@ -140,14 +140,12 @@ x11: deps
 		project.yaml
 
 draft: $(GTLANG)-draft.yaml
-$(GTLANG)-draft.yaml: 
+$(GTLANG)-draft.yaml: deps \
+				$(GTCORE)/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC)
 	@echo
 	@echo "*** Building draft keyboard yaml file based on: ***"
 	@echo "*** $$GTCORE/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC)"
 	@echo
-	@echo "Test: $(CLDR_SRC)"
-	@echo
-	exit 1
 	PYTHONPATH=deps/$(SOFTKBDGEN) \
 	python3.5 -m kbdgen.cldr cldr2kbdgen \
 		$(GTCORE)/keyboards-templates/cldr/keyboards/osx/$(CLDR_SRC) \
