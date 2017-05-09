@@ -32,4 +32,7 @@ targets:
     packageId: no.uit.giella.keyboards.liv
     bundleName: *bundleName
     icon: images/liv-icon.png
-  osx: *AppleID
+  osx:
+    <<: *AppleID
+    icon: images/liv-icon.png
+    codeSignId: "my-test-installer"
