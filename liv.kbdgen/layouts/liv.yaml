@@ -1,7 +1,9 @@
 displayNames:
   liv: Līv
   en: Livonian
+
 decimal: ','
+
 macOS:
   primary:
     layers:
@@ -58,6 +60,7 @@ macOS:
         B10: –
   deadKeys:
     cmd+alt: [',', '¯', '¸', 'ƒ', '˙', '˜', '˝']
+
 transforms:
   '-':
     ' ': '-'
@@ -550,6 +553,7 @@ transforms:
     O: Ơ
     u: ư
     U: Ư
+
 longpress:
   A: Ā
   E: Ē
@@ -593,7 +597,7 @@ longpress:
   r: ŗ
   s: š
   t: ţ
+
 keyNames:
   space: vait
   return: sizzõl
-
