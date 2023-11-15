@@ -40,7 +40,7 @@ longpress:
   'N': Ņ
   R: Ŗ
   S: Š
-  T: Ţ
+  T: Ţ Ț
   a: ā
   e: ē
   i: ī
@@ -61,7 +61,7 @@ longpress:
   'n': ņ
   r: ŗ
   s: š
-  t: ţ
+  t: ţ ț
 
 keyNames:
   space: vait
